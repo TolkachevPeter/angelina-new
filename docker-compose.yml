@@ -1,0 +1,30 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "4280:4280"
+    environment:
+      - NODE_ENV=production
+      - PORT=4280
+      - LEADS_PATH=/app/data/leads.json
+      # --- SEO / branding: set these for your real deployment ---
+      - SITE_URL=${SITE_URL:-https://angelinabelokon.com}
+      - CONTACT_EMAIL=${CONTACT_EMAIL:-hello@angelinabelokon.com}
+      # - SOCIAL_LINKS=https://instagram.com/ang.belokon,https://ounce.agency
+      # - CORS_ORIGIN=https://angelinabelokon.com
+    volumes:
+      - leads-data:/app/data
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "require('http').get('http://127.0.0.1:4280/api/health/live',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  leads-data:

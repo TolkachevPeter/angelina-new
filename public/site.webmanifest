@@ -1,0 +1,15 @@
+{
+  "name": "Angelina Belokon — Art Director & Creative Consultant",
+  "short_name": "Belokon",
+  "description": "Art direction, styling and creative consulting for fashion & lifestyle brands.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8F6F2",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}

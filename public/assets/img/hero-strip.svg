@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" role="img" aria-label="CAMPAIGN">
+  <rect width="2100" height="900" fill="#E3DFD7"/>
+  <rect x="84" y="36" width="1932" height="828" fill="none" stroke="#131211" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g fill="#131211" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+    <text x="1050" y="450" font-size="95" letter-spacing="5.7" opacity="0.62">CAMPAIGN</text>
+    <text x="1050" y="583" font-size="46" letter-spacing="10.12" opacity="0.4" font-family="Arial, sans-serif">OUNCE AGENCY · 2024</text>
+  </g>
+</svg>

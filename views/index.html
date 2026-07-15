@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="%%LOCALE_SHORT%%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>%%TITLE%%</title>
+<meta name="description" content="%%DESCRIPTION%%">
+<link rel="canonical" href="%%CANONICAL%%">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="author" content="Angelina Belokon">
+<meta name="keywords" content="art director, creative consultant, fashion stylist, brand visual audit, creative direction, lookbook, campaign, fashion branding, Angelina Belokon">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelina Belokon">
+<meta property="og:title" content="%%TITLE%%">
+<meta property="og:description" content="%%DESCRIPTION%%">
+<meta property="og:url" content="%%CANONICAL%%">
+<meta property="og:image" content="%%OG_IMAGE%%">
+<meta property="og:image:secure_url" content="%%OG_IMAGE%%">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Angelina Belokon — Art Director &amp; Creative Consultant for fashion brands">
+<meta property="og:locale" content="%%LOCALE%%">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="%%TITLE%%">
+<meta name="twitter:description" content="%%DESCRIPTION%%">
+<meta name="twitter:image" content="%%OG_IMAGE%%">
+<meta name="twitter:image:alt" content="Angelina Belokon — Art Director &amp; Creative Consultant for fashion brands">%%TWITTER_META%%
+
+<!-- Icons & manifest -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Critical font preloads (above-the-fold latin subsets) -->
+<link rel="preload" href="/fonts/fac3f0bb-8989-48f2-b32f-e86c14216884.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/c18aa534-0097-4925-b33b-ae198cd6a5f0.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/72f73a2f-e76e-400f-a1d2-f71b41ea6c32.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/84394b56-ad80-4078-a0b9-707c123f862a.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/a03112dc-ec5a-415d-b917-cdc0de551467.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/c18aa534-0097-4925-b33b-ae198cd6a5f0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/72f73a2f-e76e-400f-a1d2-f71b41ea6c32.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/84394b56-ad80-4078-a0b9-707c123f862a.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/a03112dc-ec5a-415d-b917-cdc0de551467.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/c18aa534-0097-4925-b33b-ae198cd6a5f0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/72f73a2f-e76e-400f-a1d2-f71b41ea6c32.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/84394b56-ad80-4078-a0b9-707c123f862a.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/a03112dc-ec5a-415d-b917-cdc0de551467.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/c18aa534-0097-4925-b33b-ae198cd6a5f0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/3be056ab-700a-4589-99cd-27354723503a.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/39238a5b-ba7d-41be-b6a7-6fef04395899.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/99e58065-d99e-4e25-8d40-00158e4bdf77.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/fac3f0bb-8989-48f2-b32f-e86c14216884.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style>
+<style>:root { --accent: #131211; --paper: #FFFFFF; --wash: #F8F6F2; --hairline: #E6E2DB; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--paper, #FFFFFF); color: #131211; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a { color: #131211; }
+    a:hover { color: var(--accent, #A9001E); }
+    ::selection { background: #131211; color: #FFFFFF; }
+    button { cursor: pointer; }
+    input, button { font: inherit; }
+    input::placeholder { color: #6B6355; opacity: 1; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent, #A9001E); outline-offset: 3px; }
+    @keyframes hero-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes eyebrow-track { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    [data-ticker]:hover, [data-ticker]:focus-within { animation-play-state: paused; }
+    @keyframes press-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    [data-reveal-ready] [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity 760ms cubic-bezier(0.22,0.61,0.36,1), transform 760ms cubic-bezier(0.22,0.61,0.36,1); transition-delay: var(--reveal-delay, 0ms); }
+    [data-reveal-ready] [data-reveal="in"] { opacity: 1; transform: translateY(0); }
+    [data-reveal-ready] [data-reveal-line] { transform: scaleX(0); transform-origin: left center; transition: transform 1100ms cubic-bezier(0.22,0.61,0.36,1); transition-delay: var(--reveal-delay, 0ms); }
+    [data-reveal-ready] [data-reveal-line="in"] { transform: scaleX(1); }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal], [data-reveal-line] { opacity: 1 !important; transform: none !important; }
+    }
+    @media (max-width: 920px) {
+      [data-object-mount] { opacity: 0.32 !important; }
+      [data-desktop-nav] { display: none !important; }
+      [data-menu-toggle] { display: inline-flex !important; }
+    }
+    @media (min-width: 921px) {
+      [data-mobile-panel] { display: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+/* --- accessibility & progressive-enhancement helpers --- */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:#131211;color:#fff;padding:12px 18px;font:600 12px/1 'Golos Text',sans-serif;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none}
+.skip-link:focus{left:12px;top:12px}
+img{max-width:100%}
+</style>
+
+<script type="application/ld+json">%%JSONLD%%</script>
+<script src="/assets/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="top" style="font-family:'Golos Text','Helvetica Neue',Arial,sans-serif; background:var(--paper,#FFFFFF); color:#131211; font-size:17px; line-height:1.65;">
+
+  <!-- ======================= HEADER ======================= -->
+  <header style="position:sticky; top:0; z-index:60; background:var(--paper,#FFFFFF); border-bottom:1px solid var(--hairline,#E6E2DB);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px); height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+      <a href="#top" style="font-family:'Prata',serif; font-size:17px; letter-spacing:0.14em; color:#131211; text-decoration:none;">BELOKON</a>
+      <nav data-desktop-nav="" aria-label="Primary" style="display:flex; align-items:center; gap:30px;">
+        <a href="#work" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Work</a>
+        <a href="#services" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Services</a>
+        <a href="#process" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Process</a>
+        <a href="#about" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">About</a>
+        <a href="#press" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Press</a>
+        <a href="#contact" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Contact</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="#contact" style="display:inline-flex; align-items:center; justify-content:center; background:#131211; color:#FFFFFF; border:1px solid #131211; padding:11px 18px; font-size:10.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, border-color 200ms ease;" data-style-hover="background:var(--accent,#A9001E); border-color:var(--accent,#A9001E); color:#FFFFFF;">Book an Audit</a>
+        <button data-menu-toggle="" type="button" style="display:none; align-items:center; justify-content:center; background:transparent; color:#131211; border:1px solid #131211; padding:10px 14px; font-size:10.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; transition:background-color 200ms ease, color 200ms ease;" data-style-hover="background:#131211; color:#FFFFFF;">Menu</button>
+      </div>
+    </div>
+    <div data-scroll-progress="" aria-hidden="true" style="position:absolute; left:0; right:0; bottom:-1px; height:1px; background:var(--accent,#A9001E); transform:scaleX(0); transform-origin:left center;"></div>
+    
+      <nav data-mobile-panel="" data-conditional="menuOpen" aria-label="Mobile" style="position:absolute; top:100%; left:0; right:0; background:var(--paper,#FFFFFF); border-bottom:1px solid var(--hairline,#E6E2DB); padding:4px clamp(20px,5vw,48px) 18px; display:flex; flex-direction:column;; display:none;">
+        <a href="#work" style="padding:14px 0; border-bottom:1px solid var(--hairline,#E6E2DB); font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">Work</a>
+        <a href="#services" style="padding:14px 0; border-bottom:1px solid var(--hairline,#E6E2DB); font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">Services</a>
+        <a href="#process" style="padding:14px 0; border-bottom:1px solid var(--hairline,#E6E2DB); font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">Process</a>
+        <a href="#about" style="padding:14px 0; border-bottom:1px solid var(--hairline,#E6E2DB); font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">About</a>
+        <a href="#press" style="padding:14px 0; border-bottom:1px solid var(--hairline,#E6E2DB); font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">Press</a>
+        <a href="#contact" style="padding:14px 0; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none;">Contact</a>
+      </nav>
+    
+  </header>
+<main id="main" tabindex="-1" style="outline:none;">
+
+  <!-- ======================= HERO ======================= -->
+  <section style="position:relative; overflow:hidden; padding-top:clamp(64px,9vw,116px);">
+    <div data-object-mount="" aria-hidden="true" style="position:absolute; top:clamp(-20px,2vw,40px); right:max(-120px,-8vw); width:min(54vw,680px); aspect-ratio:1/1; pointer-events:none; opacity:0.55; z-index:0; animation:hero-rise 900ms cubic-bezier(0.22,0.61,0.36,1) 300ms both;"></div>
+    <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <p style="margin:0; font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E); animation:eyebrow-track 950ms cubic-bezier(0.22,0.61,0.36,1) both;">Art Director &amp; Creative Consultant — Fashion &amp; Lifestyle Brands</p>
+      <h1 style="font-family:'Prata',serif; font-weight:400; font-size:clamp(38px,6.6vw,84px); line-height:1.05; margin:26px 0 0 0; text-wrap:balance; animation:hero-rise 480ms cubic-bezier(0.22,0.61,0.36,1) 70ms both;">I make brands look expensive — and sell like it.</h1>
+      <p style="margin:28px 0 0 0; max-width:62ch; font-size:17.5px; line-height:1.65; animation:hero-rise 480ms cubic-bezier(0.22,0.61,0.36,1) 140ms both;">Angelina Belokon — art director, creative consultant and stylist. Former Harper's Bazaar fashion editor, ex senior stylist at TSUM, Moscow's leading luxury department store. Co-founder of Ounce Agency.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:40px; animation:hero-rise 480ms cubic-bezier(0.22,0.61,0.36,1) 210ms both;">
+        <a href="#contact" style="display:inline-flex; align-items:center; justify-content:center; background:#131211; color:#FFFFFF; border:1px solid #131211; padding:17px 32px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, border-color 200ms ease;" data-style-hover="background:var(--accent,#A9001E); border-color:var(--accent,#A9001E); color:#FFFFFF;">Book a Visual Audit</a>
+        <a href="#work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#131211; border:1px solid #131211; padding:17px 32px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, color 200ms ease;" data-style-hover="background:#131211; color:#FFFFFF;">Selected Work ↓</a>
+      </div>
+      </div>
+      <div style="margin-top:clamp(56px,7vw,88px); border-top:1px solid var(--hairline,#E6E2DB); border-bottom:1px solid var(--hairline,#E6E2DB); padding:16px 0; display:flex; flex-wrap:wrap; align-items:center; column-gap:18px; row-gap:8px;">
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;">Ex Harper's Bazaar</span>
+        <span aria-hidden="true" style="color:var(--accent,#A9001E); font-size:11px;">·</span>
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;">Ex TSUM</span>
+        <span aria-hidden="true" style="color:var(--accent,#A9001E); font-size:11px;">·</span>
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;">Co-founder Ounce Agency</span>
+        <span aria-hidden="true" style="color:var(--accent,#A9001E); font-size:11px;">·</span>
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;">10 Years in Fashion</span>
+        <span aria-hidden="true" style="color:var(--accent,#A9001E); font-size:11px;">·</span>
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;">Working Worldwide, Remote &amp; On Set</span>
+      </div>
+      
+        <figure data-reveal="" style="margin:clamp(40px,5vw,64px) 0 0 0;">
+          <div style="position:relative; aspect-ratio:21/9; background:#E3DFD7; overflow:hidden; transition:transform 1400ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="transform:scale(1.008);">
+            <img src="/assets/img/hero-strip.svg" alt="Wide fashion campaign still art-directed by Angelina Belokon for Ounce Agency, 2024" width="2100" height="900" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <figcaption style="margin-top:12px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Campaign — Ounce Agency — 2024</figcaption>
+        </figure>
+      
+    </section></div>
+  
+
+  <!-- ======================= WHY IT MATTERS ======================= -->
+  <section style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <p data-reveal="" style="margin:0; font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Why It Matters</p>
+      <div data-reveal="" style="--reveal-delay:100ms; margin-top:22px; border-top:1px solid #131211; border-bottom:1px solid #131211; padding:clamp(40px,6vw,72px) 0;">
+        <p style="margin:0; font-family:'Prata',serif; font-weight:400; font-size:clamp(23px,2.9vw,40px); line-height:1.42; max-width:34ch; text-wrap:pretty;">Customers decide what your product is worth before they read a word. If the visuals say 'discount', no copy will argue them out of it. My job is to close the gap between how good your product is and how it looks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 01 SELECTED WORK ======================= -->
+  <section id="work" style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">01</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Selected Work</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(32px,4.4vw,58px); line-height:1.08; margin:20px 0 0 0; text-wrap:balance;">Campaigns, lookbooks, rebrands.</h2>
+      <div data-reveal-line="" style="--reveal-delay:140ms; height:1px; background:var(--hairline,#E6E2DB); margin-top:36px;"></div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:56px 32px; margin-top:clamp(36px,4vw,56px);">
+
+        <article data-reveal="" style="--reveal-delay:0ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#E8E5DF; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-01.svg" alt="SHU SHA jewelry rebrand — brand identity, packaging and campaign by Angelina Belokon" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Rebrand</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">SHU SHA</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Full-scope jewelry rebrand: strategy, identity, packaging, campaign.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">A coherent emotional brand image and a practical visual system.</p>
+        </article>
+
+        <article data-reveal="" style="--reveal-delay:90ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#E1DDD5; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-02.svg" alt="HQBM out-of-home advertising campaign — art direction and styling by Angelina Belokon" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Campaign</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">HQBM</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Shoot and design for outdoor advertising and posters.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">Minimalist OOH communication built on physicality and styling.</p>
+        </article>
+
+        <article data-reveal="" style="--reveal-delay:180ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#D8D4CC; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-03.svg" alt="DR ZHIVAGO Grand Collection campaign shot at Pont Alexandre III, Paris" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Campaign</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">DR ZHIVAGO</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Grand Collection campaign: ballet aesthetics, Ballets Russes context.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">A visually precise story shot at Pont Alexandre III, Paris.</p>
+        </article>
+
+        <article data-reveal="" style="--reveal-delay:0ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#E1DDD5; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-04.svg" alt="Tanya Chursina artist platform — object and portrait photography direction" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">E-commerce</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">TANYA CHURSINA</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Artist platform: site structure, object and portrait shoot.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">One authorial system uniting artworks and everyday objects.</p>
+        </article>
+
+        <article data-reveal="" style="--reveal-delay:90ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#D8D4CC; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-05.svg" alt="MIOGI LI brand launch — identity, campaign and catalogue with a cool-frost aesthetic" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Rebrand</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">MIOGI LI</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Brand launch: platform, identity, campaign, catalog, video, site.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">A premium ecosystem with a recognizable “cool frost” aesthetic.</p>
+        </article>
+
+        <article data-reveal="" style="--reveal-delay:180ms; display:flex; flex-direction:column;">
+          <div style="position:relative; aspect-ratio:4/5; background:#E8E5DF; overflow:hidden; transition:opacity 600ms ease, transform 1200ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="opacity:0.94; transform:scale(1.015);">
+            <img src="/assets/img/work-06.svg" alt="BABOCHKA cover story — film photography collaged with AI generations" width="1200" height="1500" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:14px;">
+            <span style="font-size:10.5px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Lookbook</span>
+            <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Ounce Agency — 2024</span>
+          </div>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:24px; line-height:1.2; margin:10px 0 0 0;">BABOCHKA</h3>
+          <p style="margin:8px 0 0 0; font-size:15.5px; line-height:1.55;">Cover story: film photography collaged with AI generations.</p>
+          <p style="margin:6px 0 0 0; font-size:14px; line-height:1.55; color:#6B6355;">A cover capturing the balance of digital and real life.</p>
+        </article>
+
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:12px 24px; margin-top:clamp(40px,5vw,56px); border-top:1px solid var(--hairline,#E6E2DB); padding-top:22px;">
+        <p style="margin:0; font-size:15px; color:#6B6355;">Selected projects under NDA. Full case studies available on request.</p>
+        <a href="mailto:%%CONTACT_EMAIL%%" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Request Full Portfolio →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 02 SERVICES ======================= -->
+  <section id="services" style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">02</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Services</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(32px,4.4vw,58px); line-height:1.08; margin:20px 0 0 0; text-wrap:balance;">Three ways to work with me.</h2>
+      <div data-reveal-line="" style="--reveal-delay:140ms; height:1px; background:var(--hairline,#E6E2DB); margin-top:36px;"></div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:24px; margin-top:clamp(36px,4vw,56px);">
+
+        <div data-reveal="" style="--reveal-delay:0ms; border:1px solid var(--hairline,#E6E2DB); padding:clamp(28px,3vw,40px); display:flex; flex-direction:column;">
+          <span style="font-family:'Prata',serif; font-size:15px; color:var(--accent,#A9001E);">01</span>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:26px; line-height:1.2; margin:16px 0 0 0;">Brand Visual Audit</h3>
+          <p style="margin:16px 0 0 0; font-size:15.5px; line-height:1.65;">A 60-minute working session plus a written report: what your visuals say about your price point, where you lose the customer, and the exact fixes — prioritized.</p>
+          <div style="margin-top:auto; padding-top:28px;">
+            <div style="border-top:1px solid var(--hairline,#E6E2DB); padding-top:16px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">1 Week · Fixed Fee</div>
+            <a href="#contact" style="margin-top:20px; display:flex; align-items:center; justify-content:center; background:#131211; color:#FFFFFF; border:1px solid #131211; padding:15px 24px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, border-color 200ms ease;" data-style-hover="background:var(--accent,#A9001E); border-color:var(--accent,#A9001E); color:#FFFFFF;">Book an Audit</a>
+          </div>
+        </div>
+
+        <div data-reveal="" style="--reveal-delay:90ms; border:1px solid var(--hairline,#E6E2DB); padding:clamp(28px,3vw,40px); display:flex; flex-direction:column;">
+          <span style="font-family:'Prata',serif; font-size:15px; color:var(--accent,#A9001E);">02</span>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:26px; line-height:1.2; margin:16px 0 0 0;">Creative Direction</h3>
+          <p style="margin:16px 0 0 0; font-size:15.5px; line-height:1.65;">Concept to final frame: campaign, lookbook or e-commerce shoot. Moodboards, casting, styling, on-set direction, post supervision.</p>
+          <div style="margin-top:auto; padding-top:28px;">
+            <div style="border-top:1px solid var(--hairline,#E6E2DB); padding-top:16px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">3–6 Weeks · Project-based</div>
+            <a href="#contact" style="margin-top:20px; display:flex; align-items:center; justify-content:center; background:transparent; color:#131211; border:1px solid #131211; padding:15px 24px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, color 200ms ease;" data-style-hover="background:#131211; color:#FFFFFF;">Start a Project</a>
+          </div>
+        </div>
+
+        <div data-reveal="" style="--reveal-delay:180ms; border:1px solid var(--hairline,#E6E2DB); padding:clamp(28px,3vw,40px); display:flex; flex-direction:column;">
+          <span style="font-family:'Prata',serif; font-size:15px; color:var(--accent,#A9001E);">03</span>
+          <h3 style="font-family:'Prata',serif; font-weight:400; font-size:26px; line-height:1.2; margin:16px 0 0 0;">Creative Consulting</h3>
+          <p style="margin:16px 0 0 0; font-size:15.5px; line-height:1.65;">Your creative director on call: monthly art direction, content review, shoot supervision and guidance for your in-house team — without the full-time hire.</p>
+          <div style="margin-top:auto; padding-top:28px;">
+            <div style="border-top:1px solid var(--hairline,#E6E2DB); padding-top:16px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Monthly · Retainer</div>
+            <a href="#contact" style="margin-top:20px; display:flex; align-items:center; justify-content:center; background:transparent; color:#131211; border:1px solid #131211; padding:15px 24px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, color 200ms ease;" data-style-hover="background:#131211; color:#FFFFFF;">Enquire</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 20px; margin-top:32px;">
+        <p style="margin:0; font-size:15px; color:#6B6355;">Need a full visual identity or rebrand? That's delivered with my team at Ounce Agency — the brand studio I co-founded.</p>
+        <a href="https://ounce.agency" target="_blank" rel="noopener" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Ounce.Agency →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 03 PROCESS ======================= -->
+  <section id="process" style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">03</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Process</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(32px,4.4vw,58px); line-height:1.08; margin:20px 0 0 0; text-wrap:balance;">From audit to assets.</h2>
+      <div data-reveal-line="" style="--reveal-delay:140ms; height:1px; background:var(--hairline,#E6E2DB); margin-top:36px;"></div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:28px; margin-top:clamp(36px,4vw,56px);">
+        <div data-reveal="" style="--reveal-delay:0ms; border-top:1px solid #131211; padding-top:24px;">
+          <div style="font-family:'Prata',serif; font-size:clamp(34px,3vw,46px); line-height:1; color:var(--accent,#A9001E);">01</div>
+          <div style="margin-top:18px; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;">Audit</div>
+          <p style="margin:10px 0 0 0; font-size:15px; line-height:1.6;">Where the visual gap is and what it costs you.</p>
+        </div>
+        <div data-reveal="" style="--reveal-delay:80ms; border-top:1px solid #131211; padding-top:24px;">
+          <div style="font-family:'Prata',serif; font-size:clamp(34px,3vw,46px); line-height:1; color:var(--accent,#A9001E);">02</div>
+          <div style="margin-top:18px; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;">Concept</div>
+          <p style="margin:10px 0 0 0; font-size:15px; line-height:1.6;">Moodboards, references, visual codes, shot lists.</p>
+        </div>
+        <div data-reveal="" style="--reveal-delay:160ms; border-top:1px solid #131211; padding-top:24px;">
+          <div style="font-family:'Prata',serif; font-size:clamp(34px,3vw,46px); line-height:1; color:var(--accent,#A9001E);">03</div>
+          <div style="margin-top:18px; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;">Production</div>
+          <p style="margin:10px 0 0 0; font-size:15px; line-height:1.6;">Casting, styling, set, direction.</p>
+        </div>
+        <div data-reveal="" style="--reveal-delay:240ms; border-top:1px solid #131211; padding-top:24px;">
+          <div style="font-family:'Prata',serif; font-size:clamp(34px,3vw,46px); line-height:1; color:var(--accent,#A9001E);">04</div>
+          <div style="margin-top:18px; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;">Delivery</div>
+          <p style="margin:10px 0 0 0; font-size:15px; line-height:1.6;">Final assets, usage guidelines, rollout support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 04 ABOUT ======================= -->
+  <section id="about" style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">04</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">About</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(32px,4.4vw,58px); line-height:1.08; margin:20px 0 0 0; text-wrap:balance;">Ten years inside the fashion machine.</h2>
+      <div data-reveal-line="" style="--reveal-delay:140ms; height:1px; background:var(--hairline,#E6E2DB); margin-top:36px;"></div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(32px,5vw,72px); margin-top:clamp(36px,4vw,56px);">
+        <figure data-reveal="" style="margin:0;">
+          <div style="position:relative; aspect-ratio:3/4; background:#E1DDD5; overflow:hidden; transition:transform 1400ms cubic-bezier(0.22,0.61,0.36,1);" data-style-hover="transform:scale(1.01);">
+            <img src="/assets/img/portrait.svg" alt="Portrait of Angelina Belokon, art director and creative consultant for fashion brands" width="1200" height="1600" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover;">
+          </div>
+          <figcaption style="margin-top:12px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Portrait — Angelina Belokon</figcaption>
+        </figure>
+        <div data-reveal="" style="--reveal-delay:110ms;">
+          <p style="margin:0; font-size:16.5px; line-height:1.7; max-width:60ch;">I spent a decade where fashion imagery is made and judged: as a fashion editor at Harper's Bazaar and senior stylist at TSUM, Moscow's leading luxury department store — styling editorials, building campaigns and learning exactly which visual codes make a product read as premium.</p>
+          <p style="margin:20px 0 0 0; font-size:16.5px; line-height:1.7; max-width:60ch;">I co-founded Ounce Agency, a brand studio for fashion and lifestyle companies. Today I work with international brands as an art director and creative consultant: same glossy standards, applied to your margins.</p>
+          <p style="margin:20px 0 0 0; font-size:16.5px; line-height:1.7; max-width:60ch;">Working worldwide — remote and on set. Fluent in English and Russian.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr)); gap:24px; margin-top:44px;">
+            <div style="border-top:1px solid #131211; padding-top:18px;">
+              <div style="font-family:'Prata',serif; font-size:clamp(30px,2.6vw,42px); line-height:1;">10</div>
+              <div style="margin-top:10px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Years in Fashion</div>
+            </div>
+            <div style="border-top:1px solid #131211; padding-top:18px;">
+              <div style="font-family:'Prata',serif; font-size:clamp(30px,2.6vw,42px); line-height:1;">EN·RU</div>
+              <div style="margin-top:10px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Working Languages</div>
+            </div>
+            <div style="border-top:1px solid #131211; padding-top:18px;">
+              <div style="font-family:'Prata',serif; font-size:clamp(30px,2.6vw,42px); line-height:1;">Global</div>
+              <div style="margin-top:10px; font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">Remote &amp; On Set</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 05 PRESS ======================= -->
+  <section id="press" style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">05</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Press &amp; Talks</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(32px,4.4vw,58px); line-height:1.08; margin:20px 0 0 0; text-wrap:balance;">Quoted where fashion is discussed.</h2>
+      <div data-reveal-line="" style="--reveal-delay:140ms; height:1px; background:var(--hairline,#E6E2DB); margin-top:36px;"></div>
+
+      
+      
+        <div data-reveal="" style="overflow:hidden; margin-top:clamp(36px,4vw,52px); border-top:1px solid var(--hairline,#E6E2DB); border-bottom:1px solid var(--hairline,#E6E2DB); padding:18px 0;">
+          <div data-ticker="" tabindex="0" aria-label="Press mentions — hover or focus to pause" style="display:flex; width:max-content; animation:press-ticker 36s linear infinite;">
+            <div style="display:flex; align-items:center; gap:48px; padding-right:48px;">
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">Harper's Bazaar</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">RTVI</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">SRSLY</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">Harper's Bazaar</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">RTVI</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">SRSLY</span>
+              <span aria-hidden="true" style="color:var(--accent,#A9001E);">·</span>
+            </div>
+            <div aria-hidden="true" style="display:flex; align-items:center; gap:48px; padding-right:48px;">
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">Harper's Bazaar</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">RTVI</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">SRSLY</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">Harper's Bazaar</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">RTVI</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+              <span style="font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap;">SRSLY</span>
+              <span style="color:var(--accent,#A9001E);">·</span>
+            </div>
+          </div>
+        </div>
+      
+
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 20px; margin-top:28px;">
+        <p style="margin:0; font-size:15px; max-width:62ch;">Available for podcasts, panels and expert commentary on fashion branding and visual culture.</p>
+        <a href="mailto:%%CONTACT_EMAIL%%" style="font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:4px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Press Enquiries →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================= LEAD MAGNET ======================= -->
+  <section style="padding-top:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="background:var(--wash,#F8F6F2); padding:clamp(40px,6vw,72px);">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:40px; align-items:center;">
+          <div>
+            <h2 data-reveal="" style="font-family:'Prata',serif; font-weight:400; font-size:clamp(30px,3.4vw,46px); line-height:1.12; margin:0; text-wrap:balance;">Does your brand look expensive?</h2>
+            <p style="margin:18px 0 0 0; font-size:16px; line-height:1.65; max-width:48ch;">Get the 15-point Brand Visual Audit Checklist I run on every client — and see where your visuals leak value.</p>
+          </div>
+          <div>
+            
+              <form data-lead-form="" style="display:flex; flex-wrap:wrap; gap:12px;">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+                <input type="email" name="email" required="required" placeholder="you@brand.com" aria-label="Email address" style="flex:1 1 240px; padding:15px 16px; border:1px solid #131211; border-radius:0; background:var(--paper,#FFFFFF); color:#131211; font-size:15px; line-height:1.2; min-width:0;">
+                <button type="submit" style="display:inline-flex; align-items:center; justify-content:center; background:#131211; color:#FFFFFF; border:1px solid #131211; padding:15px 24px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; transition:background-color 200ms ease, border-color 200ms ease;" data-style-hover="background:var(--accent,#A9001E); border-color:var(--accent,#A9001E);">Send Me the Checklist</button>
+              </form>
+              <p style="margin:14px 0 0 0; font-size:13px; color:#6B6355;">One email. No newsletter unless you ask.</p>
+            
+            <div data-lead-confirm="" role="status" aria-live="polite" style="display:none;">
+              <div style="border-top:1px solid #131211; border-bottom:1px solid #131211; padding:22px 0;">
+                <p style="margin:0; font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;">Sent — check your inbox.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 07 CONTACT ======================= -->
+  <section id="contact" style="padding-top:clamp(84px,11vw,150px); padding-bottom:clamp(84px,11vw,150px);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+      <div data-reveal="" style="display:flex; align-items:baseline; gap:14px;">
+        <span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.08em; color:var(--accent,#A9001E);">06</span>
+        <span style="font-size:11px; font-weight:600; letter-spacing:0.17em; text-transform:uppercase; color:var(--accent,#A9001E);">Contact</span>
+      </div>
+      <h2 data-reveal="" style="--reveal-delay:70ms; font-family:'Prata',serif; font-weight:400; font-size:clamp(36px,5vw,68px); line-height:1.08; margin:22px 0 0 0; text-wrap:balance;">Limited project slots open for 2026.</h2>
+      <p style="margin:26px 0 0 0; font-size:17px; line-height:1.65; max-width:56ch;">Start with a visual audit or write me directly about your project.</p>
+      <div data-reveal="" style="--reveal-delay:140ms; display:flex; flex-wrap:wrap; gap:14px; margin-top:38px;">
+        <a href="mailto:%%CONTACT_EMAIL%%?subject=Booking%20a%20call" style="display:inline-flex; align-items:center; justify-content:center; background:#131211; color:#FFFFFF; border:1px solid #131211; padding:17px 32px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, border-color 200ms ease;" data-style-hover="background:var(--accent,#A9001E); border-color:var(--accent,#A9001E); color:#FFFFFF;">Book a Call</a>
+        <a href="mailto:%%CONTACT_EMAIL%%" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#131211; border:1px solid #131211; padding:17px 32px; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; transition:background-color 200ms ease, color 200ms ease;" data-style-hover="background:#131211; color:#FFFFFF;">Email Me</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-top:52px;">
+        <a href="https://instagram.com/ang.belokon" target="_blank" rel="noopener" style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:3px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Instagram @ang.belokon</a>
+        <span aria-hidden="true" style="color:#6B6355;">·</span>
+        <a href="https://ounce.agency" target="_blank" rel="noopener" style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none; padding-bottom:3px; background-image:linear-gradient(currentColor,currentColor); background-size:0% 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 200ms ease, color 200ms ease;" data-style-hover="background-size:100% 1px; color:var(--accent,#A9001E);">Ounce.Agency</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  </main>
+<footer style="border-top:1px solid var(--hairline,#E6E2DB);">
+    <div style="max-width:1240px; margin:0 auto; padding:26px clamp(20px,5vw,48px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:14px 32px;">
+      <p style="margin:0; font-size:13.5px; color:#6B6355;"><span style="font-family:'Prata',serif; font-size:13px; letter-spacing:0.14em; color:#131211;">BELOKON</span> — Art direction &amp; creative consulting for fashion brands.</p>
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 18px;">
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">© 2026 Angelina Belokon</span>
+        <a href="#work" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">Work</a>
+        <a href="#services" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">Services</a>
+        <a href="#process" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">Process</a>
+        <a href="#about" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">About</a>
+        <a href="#press" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">Press</a>
+        <a href="#contact" style="font-size:10.5px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#131211; text-decoration:none;" data-style-hover="color:var(--accent,#A9001E);">Contact</a>
+        <span style="font-size:10.5px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:#6B6355;">EN</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
