@@ -8,6 +8,8 @@
  * `site.contactEmail`, `site.sameAs` — MUST be set for a real deployment.
  */
 
+import { resolveTheme } from '../theme/theme';
+
 const stripTrailingSlash = (url: string): string => url.replace(/\/+$/, '');
 
 const list = (value: string | undefined): string[] =>
@@ -22,6 +24,7 @@ export interface AppConfig {
   trustProxy: boolean;
   corsOrigins: string[];
   leadsPath: string;
+  theme: string;
   throttle: { ttlSeconds: number; limit: number };
   site: {
     url: string;
@@ -58,6 +61,7 @@ export default (): AppConfig => {
     trustProxy: (process.env.TRUST_PROXY ?? 'false') === 'true',
     corsOrigins: list(process.env.CORS_ORIGIN),
     leadsPath: process.env.LEADS_PATH || `${process.cwd()}/data/leads.json`,
+    theme: resolveTheme(process.env.SITE_THEME),
     throttle: {
       ttlSeconds: Number(process.env.THROTTLE_TTL) || 60,
       limit: Number(process.env.THROTTLE_LIMIT) || 5,

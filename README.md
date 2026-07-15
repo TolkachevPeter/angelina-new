@@ -64,18 +64,37 @@ All configuration is via environment variables, validated at boot (see `.env.exa
 | `SITE_URL`      | Canonical origin — canonical tag, OG URLs, JSON-LD, sitemap   |
 | `CONTACT_EMAIL` | Contact address on the page and in structured data            |
 | `SOCIAL_LINKS`  | Comma-separated `sameAs` profile links                        |
+| `SITE_THEME`    | Default paper theme: `paper` `ivory` `pearl` `powder` `sand`  |
 | `CORS_ORIGIN`   | Enables CORS only if set                                      |
 | `THROTTLE_*`    | Contact-form rate limit (default 5 requests / 60 s per IP)    |
+
+## Colour themes (editorial paper tones)
+
+Five magazine-paper themes span crisp white to warm beige: **Paper, Ivory, Pearl, Powder, Sand**. Only the surface tones (`--paper`, `--wash`, `--hairline`) change; the black ink and accent stay constant for a fashion-print look.
+
+- Set the site-wide default with `SITE_THEME`.
+- Visitors switch via the paper-swatch control in the footer; the choice is saved in `localStorage` and re-applied before first paint (a small inline init script whose hash is whitelisted in the CSP, so there is no flash and `script-src` keeps no `'unsafe-inline'`).
+- Palettes live in `views/index.html` (`:root[data-theme="…"]`); the theme list and the init script are in `src/theme/theme.ts`.
 
 ## Routes
 
 | Route                | Description                                             |
 | -------------------- | ------------------------------------------------------- |
-| `GET /`              | Server-rendered landing page (cacheable at the edge)    |
+| `GET /`              | Landing page in English (default, cacheable at the edge)|
+| `GET /ru`            | Landing page in Russian                                 |
+| `GET /fr`            | Landing page in French                                  |
 | `GET /robots.txt`    | Dynamic robots, points to the sitemap                   |
-| `GET /sitemap.xml`   | Dynamic XML sitemap                                     |
+| `GET /sitemap.xml`   | Multilingual XML sitemap with hreflang alternates       |
 | `GET /api/health`    | Health status; `…/live` and `…/ready` probes           |
 | `POST /api/contact`  | `{ name, email, brand?, details?, language? }` → lead   |
+
+## Internationalization (EN / RU / FR)
+
+All copy lives in one dictionary, `src/i18n/content.ts` (the single source of truth). The template `views/index.html` uses `{{content.key}}` tokens; `PagesService` renders one cached, fully server-side document per language, filling content tokens from the dictionary and SEO tokens (title, description, canonical, JSON-LD, hreflang) per locale.
+
+- **Switch language:** the `EN · RU · FR` switcher in the header/footer links to `/`, `/ru`, `/fr`.
+- **SEO:** each page has its own `<html lang>`, canonical, translated `<title>`/description, translated JSON-LD (`inLanguage`), `og:locale` + alternates, and reciprocal `hreflang` alternates (plus `x-default`). The sitemap lists all three URLs with `xhtml:link` alternates.
+- **Add or edit copy:** change values in `src/i18n/content.ts`. A guard test fails the build if the template references a key missing from any language, or if any `[bracket]` placeholder slips into the HTML.
 
 `POST /api/contact` is validated with class-validator (400 on bad input), rate-limited, and protected by a hidden `website` honeypot field. Leads are appended to `LEADS_PATH` with serialized writes. Swap the JSON store for a database by replacing `LeadsService` only.
 

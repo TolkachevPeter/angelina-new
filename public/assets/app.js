@@ -15,10 +15,12 @@
     var panel = document.querySelector('[data-mobile-panel]');
     if (!toggle || !panel) return;
     var open = false;
+    var labelOpen = toggle.getAttribute('data-label-open') || 'Close';
+    var labelClosed = toggle.getAttribute('data-label-closed') || 'Menu';
     function set(next) {
       open = next;
       panel.style.display = open ? 'flex' : 'none';
-      toggle.textContent = open ? 'Close' : 'Menu';
+      toggle.textContent = open ? labelOpen : labelClosed;
       toggle.setAttribute('aria-expanded', String(open));
     }
     toggle.setAttribute('aria-controls', 'mobile-nav');
@@ -125,9 +127,11 @@
       // Forward the honeypot field so the server can drop bot submissions.
       var website = form.elements && form.elements.website ? form.elements.website.value : '';
       var btn = form.querySelector('button[type="submit"]');
+      var lblSending = btn && (btn.getAttribute('data-label-sending') || 'Sending…');
+      var lblRetry = btn && (btn.getAttribute('data-label-retry') || 'Try again');
       if (btn) {
         btn.disabled = true;
-        btn.textContent = 'Sending…';
+        btn.textContent = lblSending;
       }
       fetch('/api/contact', {
         method: 'POST',
@@ -153,7 +157,7 @@
         .catch(function () {
           if (btn) {
             btn.disabled = false;
-            btn.textContent = 'Try again';
+            btn.textContent = lblRetry;
           }
         });
     });
@@ -319,6 +323,37 @@
     }
   }
 
+  /* ---------------------------------------------- colour themes ---- */
+  // The paper tone is applied to <html data-theme> before first paint by the
+  // inline init script; here we wire the switcher and persist the choice.
+  function initTheme() {
+    var swatches = document.querySelectorAll('[data-theme-swatch]');
+    if (!swatches.length) return;
+    var STORAGE = 'belokon-theme';
+    function sync() {
+      var current = document.documentElement.getAttribute('data-theme') || '';
+      Array.prototype.forEach.call(swatches, function (b) {
+        b.setAttribute(
+          'aria-pressed',
+          b.getAttribute('data-theme-swatch') === current ? 'true' : 'false',
+        );
+      });
+    }
+    Array.prototype.forEach.call(swatches, function (b) {
+      b.addEventListener('click', function () {
+        var code = b.getAttribute('data-theme-swatch');
+        document.documentElement.setAttribute('data-theme', code);
+        try {
+          localStorage.setItem(STORAGE, code);
+        } catch (e) {
+          /* storage unavailable — the theme still applies for this visit */
+        }
+        sync();
+      });
+    });
+    sync();
+  }
+
   /* -------------------------------------------------------- boot ---- */
   function boot() {
     initMenu();
@@ -326,6 +361,7 @@
     initProgress();
     initReveal();
     initForm();
+    initTheme();
     initObject();
   }
   if (document.readyState === 'loading') {

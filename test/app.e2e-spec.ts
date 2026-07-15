@@ -128,6 +128,64 @@ describe('Belokon site (e2e)', () => {
     it('serves the OG image', () =>
       request(app.getHttpServer()).get('/og.png').expect(200).expect('Content-Type', /image\/png/));
   });
+
+  describe('Internationalization (EN / RU / FR)', () => {
+    it('serves Russian at /ru with translated content and lang', async () => {
+      const res = await request(app.getHttpServer()).get('/ru').expect(200);
+      expect(res.headers['content-language']).toBe('ru');
+      expect(res.text).toContain('<html lang="ru"');
+      expect(res.text).toContain(`<link rel="canonical" href="${SITE_URL}/ru"`);
+      expect(res.text).toContain('Работы'); // translated nav
+      expect(res.text).not.toMatch(/\{\{[a-zA-Z0-9._]+\}\}/); // no leftover content tokens
+    });
+
+    it('serves French at /fr with translated content and lang', async () => {
+      const res = await request(app.getHttpServer()).get('/fr').expect(200);
+      expect(res.headers['content-language']).toBe('fr');
+      expect(res.text).toContain('<html lang="fr"');
+      expect(res.text).toContain(`<link rel="canonical" href="${SITE_URL}/fr"`);
+      expect(res.text).not.toMatch(/\{\{[a-zA-Z0-9._]+\}\}/);
+    });
+
+    it('emits hreflang alternates (en/ru/fr + x-default) on every locale', async () => {
+      for (const path of ['/', '/ru', '/fr']) {
+        const res = await request(app.getHttpServer()).get(path).expect(200);
+        expect(res.text).toContain(`hreflang="en" href="${SITE_URL}/"`);
+        expect(res.text).toContain(`hreflang="ru" href="${SITE_URL}/ru"`);
+        expect(res.text).toContain(`hreflang="fr" href="${SITE_URL}/fr"`);
+        expect(res.text).toContain('hreflang="x-default"');
+      }
+    });
+
+    it('localizes JSON-LD inLanguage and the sitemap lists all locales', async () => {
+      const ru = await request(app.getHttpServer()).get('/ru').expect(200);
+      expect(ru.text).toContain('"inLanguage":"ru"');
+      const sitemap = await request(app.getHttpServer()).get('/sitemap.xml').expect(200);
+      expect(sitemap.text).toContain(`<loc>${SITE_URL}/ru</loc>`);
+      expect(sitemap.text).toContain(`<loc>${SITE_URL}/fr</loc>`);
+      expect(sitemap.text).toContain('hreflang="x-default"');
+    });
+  });
+
+  describe('Colour themes', () => {
+    it('renders a default paper theme, swatches, and a CSP-hashed init script', async () => {
+      const res = await request(app.getHttpServer()).get('/').expect(200);
+      expect(res.text).toMatch(/<html lang="en" data-theme="[a-z]+"/);
+      expect(res.text).toContain('data-theme-swatch="ivory"');
+      expect(res.text).toContain('data-theme-swatch="sand"');
+      expect(res.text).toContain("localStorage.getItem('belokon-theme')"); // no-flash init
+      // The inline init script's hash is whitelisted (no 'unsafe-inline').
+      expect(res.headers['content-security-policy']).toMatch(/script-src [^;]*'sha256-/);
+    });
+
+    it('applies the theme system on every language', async () => {
+      for (const path of ['/ru', '/fr']) {
+        const res = await request(app.getHttpServer()).get(path).expect(200);
+        expect(res.text).toMatch(/data-theme="[a-z]+"/);
+        expect(res.text).toContain('data-theme-swatch=');
+      }
+    });
+  });
 });
 
 describe('Rate limiting (e2e)', () => {

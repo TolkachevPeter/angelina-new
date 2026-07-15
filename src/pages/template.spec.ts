@@ -1,25 +1,24 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { CONTENT, LANGS } from '../i18n/content';
 
 /**
- * Guard: the landing template must never ship unfinished `[bracket]` placeholder
- * copy (fake prices, `[Month 2026]`, `[Name], Founder, [Brand]`, …) — that
- * content is server-rendered and indexable. CSS attribute selectors inside
- * <style> blocks (e.g. [data-reveal]) are legitimate, so those are stripped
- * before checking.
+ * Guards on the landing template:
+ *  - no unfinished [bracket] placeholder copy reaches the indexable HTML;
+ *  - only known %%SEO%% tokens are used (PagesService resolves exactly these);
+ *  - every {{content.key}} token exists in EVERY language dictionary;
+ *  - a single <h1> and a logical landmark structure.
  */
-describe('landing template content', () => {
+describe('landing template', () => {
   const html = readFileSync(join(process.cwd(), 'views', 'index.html'), 'utf-8');
   const body = html.replace(/<style[\s\S]*?<\/style>/gi, '');
 
   it('contains no unfinished [bracket] placeholder copy', () => {
-    const matches = body.match(/\[[^\]\n]{2,60}\]/g) || [];
-    expect(matches).toEqual([]);
+    expect(body.match(/\[[^\]\n]{2,60}\]/g) || []).toEqual([]);
   });
 
-  it('still uses %%TOKENS%% only for server-side SEO injection', () => {
+  it('uses only known %%SEO%% tokens', () => {
     const tokens = [...new Set(html.match(/%%[A-Z_]+%%/g) || [])];
-    // These are the only tokens PagesService is expected to resolve.
     const allowed = new Set([
       '%%TITLE%%',
       '%%DESCRIPTION%%',
@@ -30,9 +29,23 @@ describe('landing template content', () => {
       '%%CONTACT_EMAIL%%',
       '%%JSONLD%%',
       '%%TWITTER_META%%',
+      '%%HREFLANG%%',
+      '%%OG_LOCALE_ALT%%',
+      '%%LANG_SWITCHER%%',
+      '%%THEME%%',
+      '%%THEME_INIT%%',
+      '%%THEME_SWITCHER%%',
     ]);
-    const unexpected = tokens.filter((t) => !allowed.has(t));
-    expect(unexpected).toEqual([]);
+    expect(tokens.filter((t) => !allowed.has(t))).toEqual([]);
+  });
+
+  it('every {{content.key}} token exists in all language dictionaries', () => {
+    const keys = [...new Set([...html.matchAll(/\{\{([a-zA-Z0-9._]+)\}\}/g)].map((m) => m[1]))];
+    expect(keys.length).toBeGreaterThan(50);
+    for (const lang of LANGS) {
+      const missing = keys.filter((k) => CONTENT[lang.code][k] === undefined);
+      expect({ lang: lang.code, missing }).toEqual({ lang: lang.code, missing: [] });
+    }
   });
 
   it('has exactly one <h1> and a logical landmark structure', () => {
